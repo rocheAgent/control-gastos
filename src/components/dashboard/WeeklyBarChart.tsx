@@ -39,9 +39,9 @@ export function WeeklyBarChart() {
         <CardTitle>Gasto semanal</CardTitle>
       </CardHeader>
       <CardContent className="p-2">
-        <div className="h-[180px]">
+        <div className="h-[180px] overflow-hidden">
           <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={data} margin={{ top: 4, right: 4, left: -20, bottom: 0 }}>
+          <BarChart data={data} margin={{ top: 0, right: 0, left: -10, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(148,163,184,0.2)" />
             <XAxis dataKey="day" tick={{ fontSize: 11 }} />
             <YAxis tick={{ fontSize: 11 }} />

@@ -36,16 +36,16 @@ export function SpendingPieChart() {
         <CardTitle>Gastos por categoría</CardTitle>
       </CardHeader>
       <CardContent className="p-2">
-        <div className="h-[220px]">
+        <div className="h-[200px]">
           <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie
               data={byCategory}
               cx="50%"
               cy="50%"
-              innerRadius={55}
-              outerRadius={85}
-              paddingAngle={3}
+              innerRadius={45}
+              outerRadius={70}
+              paddingAngle={2}
               dataKey="value"
             >
               {byCategory.map((entry, i) => (
@@ -57,7 +57,7 @@ export function SpendingPieChart() {
                 formatCurrency(value, settings.currency)
               }
             />
-            <Legend iconType="circle" iconSize={8} />
+            <Legend iconType="circle" iconSize={6} wrapperStyle={{ fontSize: '10px' }} layout="horizontal" verticalAlign="bottom" align="center" />
           </PieChart>
           </ResponsiveContainer>
         </div>
