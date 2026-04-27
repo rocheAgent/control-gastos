@@ -35,8 +35,9 @@ export function SpendingPieChart() {
       <CardHeader>
         <CardTitle>Gastos por categoría</CardTitle>
       </CardHeader>
-      <CardContent>
-        <ResponsiveContainer width="100%" height={220}>
+      <CardContent className="p-2">
+        <div className="h-[220px]">
+          <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie
               data={byCategory}
@@ -58,7 +59,8 @@ export function SpendingPieChart() {
             />
             <Legend iconType="circle" iconSize={8} />
           </PieChart>
-        </ResponsiveContainer>
+          </ResponsiveContainer>
+        </div>
       </CardContent>
     </Card>
   );
