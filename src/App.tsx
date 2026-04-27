@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { AppShell } from "@/components/layout/AppShell";
 import { ToastContextProvider } from "@/components/ui/toast";
 import { DashboardPage } from "@/pages/DashboardPage";
@@ -14,7 +14,7 @@ import { MorePage } from "@/pages/MorePage";
 export default function App() {
   return (
     <ToastContextProvider>
-      <BrowserRouter>
+      <HashRouter>
         <AppShell>
           <Routes>
             <Route path="/" element={<DashboardPage />} />
@@ -28,7 +28,7 @@ export default function App() {
             <Route path="/configuracion" element={<SettingsPage />} />
           </Routes>
         </AppShell>
-      </BrowserRouter>
+      </HashRouter>
     </ToastContextProvider>
   );
 }
